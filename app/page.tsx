@@ -42,7 +42,6 @@ export default function Home() {
   const [withdrawAddress, setWithdrawAddress] = useState("")
   const [showSuccessMessage, setShowSuccessMessage] = useState(false)
 
-  // This is a placeholder contract address. In a real application, you would use the actual contract address.
   const contractAddress = "SOON"
 
   const handleClick = () => {
@@ -64,12 +63,10 @@ export default function Home() {
       alert("Please enter a valid crypto address.")
       return
     }
-    // Simulating a successful withdrawal
     setIsWithdrawModalOpen(false)
     setShowSuccessMessage(true)
-    setBalance(0) // Reset balance after withdrawal
+    setBalance(0)
 
-    // Hide success message after 3 seconds
     setTimeout(() => {
       setShowSuccessMessage(false)
     }, 3000)
@@ -77,7 +74,6 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-green-100 flex flex-col">
-      {/* Header with PumpFun Logo and Social Media Icons */}
       <header className="bg-green-600 text-white py-2 px-4">
         <div className="container mx-auto flex justify-between items-center">
           <PumpFunLogo />
@@ -151,7 +147,6 @@ export default function Home() {
           </button>
         </div>
 
-        {/* Roadmap Section */}
         <div className="w-full max-w-2xl mt-16">
           <h2 className="text-3xl font-bold text-green-800 mb-8 text-center">Roadmap</h2>
           <div className="space-y-8">
